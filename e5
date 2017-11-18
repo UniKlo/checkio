@@ -1,0 +1,16 @@
+def between_markers(text, begin, end):
+    import re
+    
+    if begin not in text:
+        newtext = re.findall('(.+)%s'%re.escape(end), text)
+        if end not in text:
+            newtext = text
+            
+    elif end not in text:
+        newtext = re.findall('%s(.+)'%re.escape(begin), text)
+    
+    else:
+        newtext = re.findall('%s(.+)%s'%(re.escape(begin),re.escape(end)), text)
+    newtext=''.join(newtext)
+    return newtext
+
