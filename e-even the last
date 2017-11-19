@@ -1,0 +1,14 @@
+def checkio(array):
+    """
+        sums even-indexes elements and multiply at the last
+    """
+    c=0
+    sum_list=[]
+    if array == []:
+        return 0
+    else:
+        while c < len(array):
+            sum_list.append(array[c])
+            c+=2
+            
+        return sum(sum_list)*array[-1]
