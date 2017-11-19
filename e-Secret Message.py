@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Nov 18 20:46:56 2017
-
-@author: khloe
-"""
 
 def find_message(text):
     import re
